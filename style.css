@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+.contact-section {
+    background-color: #000066;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font: 8px Roboto;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-icons {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.contact-icon {
+    font-size: 13px;
+    margin-left: 15px;
+}
+.contact-icon:hover{
+    cursor: pointer;
+    scale: 1.5;
+    transition: 200ms;
+}
+
+@media (orientation: landscape) {
+    .contact-section{
+        font-size: 15px;
+        padding: 10px;
+    }
+    .contact-icon{
+        margin-top: 2px;
+        margin-right: 6px;
+        font-size: 16px;
+    }
+}
+
+
+.logo {
+    width: 50%;
+    margin: 10px;
+}
+
+.main-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-heading {
+    font: 20px Roboto;
+    font-weight: bold;
+    text-align: center;
+}
+
+.main-para {
+    font: 13px Roboto;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+}
+
+@media (orientation: landscape) {
+    .main-heading{
+        font-size: 30px;
+        font-weight: bolder;
+    }
+    .main-para{
+        font-size: 19px;
+    }
+}
+
+.main-para::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    background-color: #000066;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 250ms ease-in;
+}
+
+.main-div:hover .main-para::after{
+    transform: scaleX(1);
+}
+
+.card {
+    padding: 10px;
+    border-width: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+}
+.card:hover .card-icon{
+    font-size: 22px;
+    width: 43px;
+    transition: 250ms;
+}
+.card-icon {
+    background-color: #000066;
+    width: 30px;
+    border-radius: 30px;
+    padding: 10px;
+    color: white;
+    font-size: 14px;
+}
+
+
+.card-title {
+    font: 12px Roboto;
+    font-weight: bold;
+    color: #000066;
+}
+
+.card-description {
+    font: 10px Roboto;
+    color: gray;
+}
+
+@media (orientation:landscape) {
+    .card-icon{
+        font-size: 20px;
+        width: 40px;
+    }    
+    .card-title{
+        font-size: 16px;
+        font-weight: bolder;
+    }
+    .card-description{
+        font-size: 12px;
+    }
+}
+
+.about-section {
+    background-color: #f4f3f3;
+}
+
+.about-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-section-heading {
+    color: darkgreen;
+    font: 25px Roboto;
+    font-style: italic;
+    text-align: center;
+    font-weight: bold;
+}
+
+.about-heading {
+    color: #000066;
+    font: 20px Roboto;
+    font-style: italic;
+    font-weight: bolder;
+    position: relative;
+}
+.about-heading::after{
+    content: '';
+    position: absolute;
+    width: 13%;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background-color: #000066;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 250ms ease-in;
+}
+
+.about-card:hover .about-heading::after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.about-para {
+    font: 13px Roboto;
+}
+
+.about-desc {
+    font: 10px Roboto;
+    color: gray;
+    font-weight: bold;
+}
+@media (orientation:landscape) {
+    .about-section-heading{
+        font-size: 30px;
+        font-weight: bolder;
+        letter-spacing: 1.3px;
+    }
+    .about-heading{
+        font-size: 26px;
+        font-weight: bolder;
+    }
+    .about-para{
+        font-size: 14px;
+    }
+    .about-desc{
+        font-size: 11px;
+    }
+}
+
+hr {
+    text-align: left;
+    border-radius: 0px;
+    background-color: #000066;
+    border-width: 3px;
+    margin-top: 0px;
+}
+
+.hr {
+    width: 60px;
+    border-radius: 30px;
+}
+
+.read-btn {
+    background-color: hsl(197, 76%, 70%);
+    padding: 8px;
+    font: 12px Roboto;
+    font-weight: bold;
+    border-color: black;
+    border-radius: 4px;
+    border-width: 1px;
+    scale: 1;
+    transition: 0.5s;
+}
+.read-btn:hover{
+    scale: 1.2;
+    background-color: hsl(197, 76%, 60%);
+}
+.read-btn:active{
+    scale: 1;
+    background: hsl(197, 76%, 70%);
+    border: none;
+}
+
+.services-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-size: cover;
+    width: 230px;
+    height: 30vh;
+    border-radius: 8px;
+    margin: 10px;
+    scale: 1;
+    transition: 0.5s;
+}
+.services-card:hover{
+    scale: 1.05;
+}
+@media (oreintation:portrait) {
+    .services-card{
+        width: 40%;
+        height: 25vh;
+    }
+}
+
+.service {
+    background-color: white;
+    color: black;
+    font: 15px Roboto;
+    font-weight: bold;
+    padding: 5px;
+    text-align: center;
+}
+
+.contact-us{
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+.contact-us::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(152, 208, 200);
+    left: 0;
+    top: 0;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease-in;
+}
+.contact-us:hover::after{
+    transform: scaleX(1);
+}
+
+
+
+.f-grow {
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card2 {
+    background-image: url('https://www.austintec.com/wp-content/uploads/2019/04/types-of-engineers.jpg');
+}
+
+.card1 {
+    background-image: url('https://tse3.mm.bing.net/th?id=OIP.UJLbd8K85O__AhhxTcZ8fgHaEg&pid=Api&P=0&h=180');
+}
+
+.card3 {
+    background-image: url('https://1.bp.blogspot.com/-uTovRjnpkhs/Vfavf0ECo3I/AAAAAAAACuI/HMnt9--RyjQ/s1600/3.jpg');
+}
+
+.card4 {
+    background-image: url('https://www.mhwilliams.com/wp-content/uploads/2021/05/6MHW1-scaled.jpeg');
+}
+
+.card5 {
+    background-image: url('http://www.etc-web.com/wp-content/uploads/contact-us_banner.jpg');
+}
